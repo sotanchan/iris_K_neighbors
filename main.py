@@ -62,7 +62,7 @@ print(max_K_list)
 
 #次元削減後のアヤメデータの散布図
 fig2=plt.figure()
-ax2=fig2.add_subplot(1,2,2)
+ax2=fig2.add_subplot(1,1,1)
 
 ax2.set_title('iris scatter plot')
 #setosa
