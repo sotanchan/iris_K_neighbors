@@ -7,15 +7,12 @@ import matplotlib.pyplot as plt
 
 
 iris = load_iris()
-# np.savetxt("data/iris_data.txt",iris.data)
 
 #データセットの読み込み
-# data=np.loadtxt("data/iris_data.txt")
 data=iris.data
 y_train=iris.target
 
-print(data.shape)
-print(y_train.shape)
+
 
 #主成分分析
 pca=PCA(2)
@@ -25,7 +22,6 @@ data = pca.fit_transform(data)
 print(f"累積寄与率：{str(np.cumsum(pca.explained_variance_ratio_)[-1])}")
 
 X_train, X_test ,y_train,y_test= train_test_split(data,y_train, test_size=0.1,random_state=0)
-print(X_train.shape)
 
 neighbors=range(1,len(y_train))
 scores=[]
